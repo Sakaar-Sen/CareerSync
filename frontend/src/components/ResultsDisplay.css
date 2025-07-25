@@ -1,0 +1,187 @@
+.results-display {
+  width: 100%;
+}
+
+.results-main-title {
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 2.5rem;
+}
+
+.results-grid {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.results-card {
+  background-color: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+
+.results-card-title {
+  font-size: 1.2rem;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  color: #e2e8f0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+}
+
+/* Score Donut Chart */
+.score-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.score-chart-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.score-donut {
+  transform: rotate(-90deg);
+}
+.score-donut-bg, .score-donut-fg {
+  fill: none;
+  stroke-width: 12;
+  stroke-linecap: round;
+}
+.score-donut-bg {
+  stroke: #334155;
+}
+.score-donut-fg {
+  transition: stroke-dashoffset 0.5s ease-in-out;
+}
+.score-chart-text {
+  position: absolute;
+  font-size: 2rem;
+  top: 3rem;
+  font-weight: 700;
+  color: #fff;
+}
+.score-chart-label {
+  margin-top: 1rem;
+  font-weight: 500;
+  color: #94a3b8;
+  font-size: 0.9rem;
+}
+
+/* Keywords Card */
+.keywords-section h4 {
+  margin: 0 0 0.75rem;
+  font-size: 1rem;
+  color: #cbd5e1;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 500;
+}
+.keywords-section:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+.pills-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+.pill {
+  padding: 0.3rem 0.8rem;
+  border-radius: 1rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+.icon-strong { color: #4ade80; }
+.icon-missing { color: #f43f5e; }
+
+.pill-strong {
+  background-color: rgba(74, 222, 128, 0.1);
+  color: #a7f3d0;
+  border: 1px solid rgba(74, 222, 128, 0.2);
+}
+.pill-missing {
+  background-color: rgba(244, 63, 94, 0.1);
+  color: #fecdd3;
+  border: 1px solid rgba(244, 63, 94, 0.2);
+}
+
+/* Suggestion Cards */
+.suggestion-card {
+  margin-bottom: 1.5rem;
+}
+.suggestion-text {
+  background-color: #0f172a;
+  border-left: 4px solid #38bdf8;
+  padding: 1rem;
+  border-radius: 4px;
+  line-height: 1.6;
+  color: #cbd5e1;
+}
+.diff-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.diff-section {
+  flex: 1;
+  padding: 1rem;
+  border-radius: 6px;
+  border: 1px solid #334155;
+}
+.diff-section p {
+  margin: 0;
+  line-height: 1.6;
+  color: #cbd5e1;
+}
+.diff-section strong {
+    color: #94a3b8;
+    font-size: 0.9rem;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+.diff-section.original {
+  background-color: rgba(244, 63, 94, 0.05);
+}
+.diff-section.rewritten {
+  background-color: rgba(74, 222, 128, 0.05);
+}
+.diff-arrow {
+  color: #64748b;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.card-header .results-card-title {
+  margin-bottom: 0; 
+  flex-grow: 1;
+}
+.copy-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #334155;
+  color: #cbd5e1;
+  border: 1px solid #475569;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+.copy-button:hover {
+  background-color: #475569;
+}

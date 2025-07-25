@@ -1,0 +1,118 @@
+.dashboard-page {
+    background-color: #0f172a;
+    min-height: 100vh;
+    color: #e2e8f0;
+}
+
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 5%;
+    background-color: #1e293b;
+    border-bottom: 1px solid #334155;
+}
+
+.dashboard-header h1 {
+    margin: 0;
+    font-size: 1.8rem;
+}
+
+.new-analysis-btn {
+    background-color: #6ee7b7;
+    color: #0f172a;
+    border: none;
+    padding: 0.7rem 1.5rem;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.2s;
+}
+
+.new-analysis-btn:hover {
+    background-color: #a7f3d0;
+}
+
+.dashboard-content {
+    padding: 2rem 5%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.no-history-card {
+    background-color: #1e293b;
+    border: 1px dashed #334155;
+    border-radius: 8px;
+    padding: 3rem;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.no-history-card svg {
+    color: #64748b;
+    margin-bottom: 1rem;
+}
+
+.no-history-card h2 {
+    margin: 0 0 0.5rem;
+    color: #fff;
+}
+
+.no-history-card p {
+    color: #94a3b8;
+    margin: 0;
+}
+
+.history-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.history-item {
+    background-color: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 8px;
+    padding: 1rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    text-align: left;
+    width: 100%;
+    color: inherit;
+    font-family: inherit;
+    transition: border-color 0.2s, background-color 0.2s;
+}
+
+.history-item:hover {
+    border-color: #6ee7b7;
+    background-color: #334155;
+}
+
+.history-item svg {
+    color: #94a3b8; 
+    transition: color 0.2s;
+}
+
+.history-item:hover svg {
+    color: #6ee7b7;
+}
+
+.history-item-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.history-date {
+    font-size: 0.9rem;
+    color: #94a3b8;
+}
+
+.history-score {
+    font-size: 1.1rem;
+    font-weight: 600;
+}

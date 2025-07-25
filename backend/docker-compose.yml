@@ -1,0 +1,61 @@
+version: '3.8'
+
+services:
+  # PostgreSQL Database Service
+  db:
+    image: postgres:16-alpine # <-- UPDATED from 13 to 16
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    environment:
+      - POSTGRES_DB=careersync_db
+      - POSTGRES_USER=careersync_user
+      - POSTGRES_PASSWORD=careersync_password
+    ports:
+      - "5432:5432"
+
+  # Redis Service
+  redis:
+    image: "redis:alpine"
+    ports:
+      - "6379:6379"
+
+  # Django Web Service
+  backend:
+    build: .
+    command: >
+      sh -c "python manage.py migrate &&
+             python manage.py runserver 0.0.0.0:8000"
+    volumes:
+      - ..:/app
+    working_dir: /app/backend
+    ports:
+      - "8000:8000"
+    environment:
+      - DB_HOST=db
+      - DB_NAME=careersync_db
+      - DB_USER=careersync_user
+      - DB_PASSWORD=careersync_password
+      - API_KEY=${API_KEY}
+    depends_on:
+      - db
+      - redis
+
+  # Celery Worker Service
+  celery_worker:
+    build: .
+    command: celery -A base worker --loglevel=info
+    volumes:
+      - ..:/app
+    working_dir: /app/backend
+    environment:
+      - DB_HOST=db
+      - DB_NAME=careersync_db
+      - DB_USER=careersync_user
+      - DB_PASSWORD=careersync_password
+      - API_KEY=${API_KEY}
+    depends_on:
+      - db
+      - redis
+
+volumes:
+  postgres_data:
