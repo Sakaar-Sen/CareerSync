@@ -2,7 +2,7 @@
 
 CareerSync is a full-stack web application designed to help job seekers optimize their resumes. Users can upload their resume and a job description to receive instant, AI-powered feedback, including a match score, keyword analysis, and actionable suggestions for improvement. The application supports user accounts to save and review analysis history.
 
-## ✨ Features
+## Features
 
 - **AI-Powered Analysis**: Leverages a Large Language Model (LLM) to provide detailed feedback on resumes.
 - **Asynchronous Processing**: Uses Celery and Redis to handle intensive analysis tasks in the background, ensuring a responsive user experience.
@@ -13,7 +13,7 @@ CareerSync is a full-stack web application designed to help job seekers optimize
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 | Category      | Technology                                       |
 |---------------|--------------------------------------------------|
@@ -26,7 +26,7 @@ CareerSync is a full-stack web application designed to help job seekers optimize
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 Follow these instructions to get the project up and running on your local machine for development and testing purposes.
 
