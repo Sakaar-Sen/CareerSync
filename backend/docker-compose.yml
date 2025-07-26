@@ -1,9 +1,8 @@
 version: '3.8'
 
 services:
-  # PostgreSQL Database Service
   db:
-    image: postgres:16-alpine # <-- UPDATED from 13 to 16
+    image: postgres:16-alpine 
     volumes:
       - postgres_data:/var/lib/postgresql/data/
     environment:
@@ -13,13 +12,11 @@ services:
     ports:
       - "5432:5432"
 
-  # Redis Service
   redis:
     image: "redis:alpine"
     ports:
       - "6379:6379"
 
-  # Django Web Service
   backend:
     build: .
     command: >
@@ -40,7 +37,6 @@ services:
       - db
       - redis
 
-  # Celery Worker Service
   celery_worker:
     build: .
     command: celery -A base worker --loglevel=info
