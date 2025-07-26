@@ -1,5 +1,3 @@
-# analysis/tasks.py
-
 import os
 import json
 import fitz
