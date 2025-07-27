@@ -21,7 +21,7 @@ CareerSync is a full-stack web application designed to help job seekers optimize
 | **Frontend** | React.js                              |
 | **Database** | PostgreSQL                                       |
 | **Message Broker**| Redis                                            |
-| **AI API** | OpenAI-Compatible (e.g., Llama 3.1)              |
+| **AI API** | OpenAI-Compatible              |
 | **Deployment**| Docker                                   |
 
 ---
